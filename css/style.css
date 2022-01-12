@@ -31,20 +31,55 @@ h1 {
 }
 
 .photographer_section article {
-  justify-self: center;
+  /* justify-self: center; */
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
+
   align-items: center;
   flex-direction: column;
+}
+.photographer_section a {
+  text-decoration: none;
+  /* justify-self: center; */
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 0%;
 }
 
 .photographer_section article h2 {
   color: #d3573c;
   font-size: 36px;
+  width: 100%;
+  text-align: center;
+  padding: 0%;
+  margin: 0%;
 }
 
 .photographer_section article img {
   height: 200px;
   width: 200px;
   border-radius: 50%;
+  text-align: center;
+}
+.photographer_section .local {
+  color: #901c1c;
+  font-size: 22px;
+  width: 100%;
+  text-align: center;
+}
+.photographer_section .tagline {
+  width: 100%;
+  text-align: center;
+}
+.photographer_section .price {
+  color: #525252;
+  width: 100%;
+  text-align: center;
+}
+.photographer_section p {
+  margin: 0%;
+  padding: 0%;
 }

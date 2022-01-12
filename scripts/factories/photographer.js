@@ -14,21 +14,21 @@ function photographerFactory(data) {
         img.setAttribute("src", picture)
         const h2 = document.createElement( 'h2' );
         h2.textContent = name;
-        const h3=document.createElement( 'h3' );
-        h3.className="local";
-        h3.textContent = city+","+country;
-        const p=document.createElement('p');
-        p.className="tagline";
-        p.textContent=tagline;
-        const p1=document.createElement('p');
-        p1.className="price";
-        p1.textContent=price+"€/jour";
+        const p1=document.createElement( 'p' );
+        p1.className="local";
+        p1.textContent = city+","+country;
+        const p2=document.createElement('p');
+        p2.className="tagline";
+        p2.textContent=tagline;
+        const p3=document.createElement('p');
+        p3.className="price";
+        p3.textContent=price+"€/jour";
         article.appendChild(a),
         a.appendChild(img);
         a.appendChild(h2);
-        article.appendChild(h3);
-        article.appendChild(p);
         article.appendChild(p1);
+        article.appendChild(p2);
+        article.appendChild(p3);
 
         return (article);
     }
