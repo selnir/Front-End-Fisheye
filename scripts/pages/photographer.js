@@ -1,10 +1,11 @@
 
 function tripop(){
 
-    const tabfigure=document.querySelector("figatpion");
-    
-    
-    document.querySelector(".photo_section").innerHTML=`${tabfigure.nodeName}`;
+    const FigcaptionHtml=document.querySelector("figcaption");
+    const FigureNode=FigcaptionHtml.parentNode;
+
+    const FigureHtml=document.querySelector(FigureNode.nodeName).innerHTML; 
+    document.querySelector(".photo_section").innerHTML=`${FigureHtml}`;
 
 
 }
