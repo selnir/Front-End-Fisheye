@@ -3,7 +3,11 @@
   <head>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <meta charset="utf-8" />
-    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <!-- <link rel="icon" type="image/png" href="assets/favicon.png" /> -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.0/css/all.css"
+    />
     <link
       href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap"
       rel="stylesheet"
@@ -20,6 +24,13 @@
           Contactez-moi
         </button>
       </div>
+      <p>Trier par</p>
+      <button type="=button" value="Popularite" onclick="tripop()">
+        Popularite
+      </button>
+      <button type="=button" value="Date" onclick="tridate()">Date</button>
+      <button type="=button" value="Titre" onclick="trititre()">Titre</button>
+
       <section class="photo_section"></section>
     </main>
     <div id="contact_modal">

@@ -16,7 +16,7 @@ function getVideo(src)
 function mediaFactory(data)
 {        
   
-    const {photographerId,title,image,video,likes,date,price}=data;
+    const {id,photographerId,title,image,video,likes,date,price}=data;
 
     const picture =`Sample_Photos/Media/${image}`;
 
@@ -24,21 +24,26 @@ function mediaFactory(data)
 
     function getUsermediaDOM() {
 
-        const article = document.createElement( 'article' );
-        // const mediaHTML =`
+        const figure = document.createElement( 'figure' );
+        // const mediaHTML;
         // ${getPhoto(picture)}`#
         if(typeof video=='undefined')
         {
-            article.innerHTML=getPhoto(picture);
+            mediaHTML=getPhoto(picture);
         }
         else
         {        
-            article.innerHTML=getVideo(movie);
+            mediaHTML=getVideo(movie);
         }
 
-       
+       figure.innerHTML=`<figure >${mediaHTML}<figcaption>
+       <p>${title}</p><div class="likesarea"><p>${likes}</p>
+       <button id="p${id}" class="butlikes" type="button" onclick="addlikes(this)">
+       <img src="assets/icons/favorite-24px 1.svg" />
+       </button></div>
+       </figcaption></figure>`;
 
-        return (article);
+        return (figure);
     }
 
     return  {picture,movie, getUsermediaDOM};
