@@ -181,7 +181,7 @@ aside p {
 aside p img {
   margin-left: 5px;
 }
-.butlikes {
+figcaption button {
   width: fit-content;
   height: fit-content;
   cursor: pointer;
@@ -191,4 +191,7 @@ aside p img {
 .likesarea {
   display: flex;
   align-items: center;
+}
+.date {
+  display: none;
 }

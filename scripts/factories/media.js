@@ -25,6 +25,7 @@ function mediaFactory(data)
     function getUsermediaDOM() {
 
         const figure = document.createElement( 'figure' );
+        figure.setAttribute("id",`p${id}`);
         // const mediaHTML;
         // ${getPhoto(picture)}`#
         if(typeof video=='undefined')
@@ -36,12 +37,12 @@ function mediaFactory(data)
             mediaHTML=getVideo(movie);
         }
 
-       figure.innerHTML=`<figure >${mediaHTML}<figcaption>
+       figure.innerHTML=`${mediaHTML}<figcaption>
        <p>${title}</p><div class="likesarea"><p>${likes}</p>
-       <button id="p${id}" class="butlikes" type="button" onclick="addlikes(this)">
+       <button" type="button" onclick="addlikes(${id})">
        <img src="assets/icons/favorite-24px 1.svg" />
-       </button></div>
-       </figcaption></figure>`;
+       </button></div><p class="date">${date}</p>
+       </figcaption>`;
 
         return (figure);
     }

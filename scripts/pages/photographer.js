@@ -1,23 +1,117 @@
 
 function tripop(){
 
-    const FigcaptionHtml=document.querySelector("figcaption");
-    const FigureNode=FigcaptionHtml.parentNode;
+    const photo_section=document.querySelector(".photo_section");
+    const TabFigNode=Array.from(photo_section.childNodes);
+    const clone=new Array(TabFigNode.length);
 
-    const FigureHtml=document.querySelector(FigureNode.nodeName).innerHTML; 
-    document.querySelector(".photo_section").innerHTML=`${FigureHtml}`;
+
+
+    TabFigNode.sort(function compare(a, b) { 
+        if (parseInt(a.childNodes[1].childNodes[2].childNodes[0].textContent) < parseInt(b.childNodes[1].childNodes[2].childNodes[0].textContent))
+           return 1;
+        if (parseInt(a.childNodes[1].childNodes[2].childNodes[0].textContent) > parseInt(b.childNodes[1].childNodes[2].childNodes[0].textContent))
+           return -1;
+        return 0;
+      });
+    // const PopNode=TabFigNode[0].childNodes[1].childNodes[2].childNodes[0].textContent;
+    // photo_section.innerHTML=`${PopNode}`;
+    
+    TabFigNode.forEach((figure,index)=>{
+        
+        const figById=document.getElementById(`${figure.getAttribute("id")}`);
+        clone[index] =figById.cloneNode(true);
+        // figure.parentNode.appendChild(clone);
+
+    });
+
+    photo_section.innerHTML="";
+
+    clone.forEach((figurehtml)=>{
+
+        photo_section.appendChild(figurehtml);
+    })
+}
+
+function tridate(){
+    const photo_section=document.querySelector(".photo_section");
+    const TabFigNode=Array.from(photo_section.childNodes);
+    const clone=new Array(TabFigNode.length);
+
+
+
+    TabFigNode.sort(function compare(a, b) { 
+        if (a.childNodes[1].childNodes[3].textContent < b.childNodes[1].childNodes[3].textContent)
+           return 1;
+        if (a.childNodes[1].childNodes[3].textContent > b.childNodes[1].childNodes[3].textContent)
+           return -1;
+        return 0;
+      });
+
+    // const PopNode=TabFigNode[0].childNodes[1].childNodes[3].textContent;
+    // photo_section.innerHTML=`${PopNode}`;
+    
+    TabFigNode.forEach((figure,index)=>{
+        
+        const figById=document.getElementById(`${figure.getAttribute("id")}`);
+        clone[index] =figById.cloneNode(true);
+
+    });
+
+    photo_section.innerHTML="";
+
+    clone.forEach((figurehtml)=>{
+
+        photo_section.appendChild(figurehtml);
+    })
 
 
 }
-function addlikes(buttonlike){
-    
 
-    const buttonid =document.querySelector(`#${buttonlike.id}`);
-   const likehtml=buttonid.previousElementSibling;
-   oldlike=parseInt(likehtml.firstChild.nodeValue);
+function trititre(){
+
+    const photo_section=document.querySelector(".photo_section");
+    const TabFigNode=Array.from(photo_section.childNodes);
+    const clone=new Array(TabFigNode.length);
+
+
+
+    TabFigNode.sort(function compare(a, b) { 
+        if (a.childNodes[1].childNodes[1].textContent < b.childNodes[1].childNodes[1].textContent)
+           return -1;
+        if (a.childNodes[1].childNodes[1].textContent > b.childNodes[1].childNodes[1].textContent)
+           return 1;
+        return 0;
+      });
+
+    // const PopNode=TabFigNode[0].childNodes[1].childNodes[1].textContent;
+    // photo_section.innerHTML=`${PopNode}`;
+    
+    TabFigNode.forEach((figure,index)=>{
+        
+        const figById=document.getElementById(`${figure.getAttribute("id")}`);
+        clone[index] =figById.cloneNode(true);
+
+    });
+
+    photo_section.innerHTML="";
+
+    clone.forEach((figurehtml)=>{
+
+        photo_section.appendChild(figurehtml);
+    })
+
+
+
+
+}
+function addlikes(idfig){
+
+    const buttonlike=document.getElementById(`p${idfig}`).lastChild;
+   const likehtml=buttonlike.childNodes[2].firstChild;
+   oldlike=parseInt(likehtml.innerHTML);
    newlike=oldlike+1;
    likehtml.innerHTML= `${newlike}`;
-
     const liketothtml=document.querySelector(".price_day").previousElementSibling;
     oldliketot=parseInt(liketothtml.firstChild.nodeValue);
     newliketot=oldliketot+1;
