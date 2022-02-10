@@ -8,7 +8,7 @@ function photographerFactory(data) {
         const article = document.createElement( 'article' );
         const url=new URL(location.origin + '/photographer.html');
         const search_params=url.searchParams;
-        search_params.set('id',id)
+        search_params.set('idphoto',id)
         const a=document.createElement('a');
         a.setAttribute('href',url);
         const img = document.createElement( 'img' );
