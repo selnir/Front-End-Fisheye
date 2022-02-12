@@ -1,0 +1,21 @@
+:root {
+  /* color */
+  --background-primary-color: #901c1c;
+  --font-primary-color: #d3573c;
+  --background-secondary-color: var(--font-primary-color);
+  --font-secondary-color: var(--background-primary-color);
+  --font-2-secondary-color: #525252;
+  --background-2-secondary-color: #fafafa;
+
+  /* font-size: ; */
+  --font-size-bouton: 1.125em;
+  --font-size-name: 4em;
+  --font-size-index-location: 1.5em;
+  --font-size-index-sentence: 0.625em;
+  --font-size-index-name: 2.25em;
+  --font-size-index-price: 0.563em;
+  --font-size-photo-sentence: var(--font-size-bouton);
+  --font-size-photo-title: var(--font-size-index-location);
+
+  /*widht and height*/
+}

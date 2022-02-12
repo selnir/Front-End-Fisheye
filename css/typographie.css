@@ -1,0 +1,44 @@
+body {
+  font-family: "DM Sans", sans-serif;
+}
+h1 {
+  color: var(--font-secondary-color);
+}
+.contact_button {
+  font-size: var(--font-size-bouton);
+  font-weight: bold;
+  color: white;
+}
+.photograph-header h1 {
+  color: var(--font-primary-color);
+  font-size: var(--font-size-index-name);
+}
+figure figcaption {
+  color: var(--font-secondary-color);
+}
+.photograph-header .local {
+  color: var(--font-secondary-color);
+  font-size: var(--font-size-photo-title);
+}
+.photograph-header .price {
+  color: var(--font-2-secondary-color);
+}
+#main p {
+  font-size: var(--font-size-bouton);
+  font-weight: bold;
+}
+aside {
+  background-color: var(--background-secondary-color);
+}
+
+.photographer_section article h2 {
+  color: var(--font-primary-color);
+  font-size: var(--font-size-index-name);
+}
+.photographer_section .local {
+  color: var(--font-secondary-color);
+  font-size: var(--font-size-index-location);
+}
+.photographer_section .price {
+  color: var(--font-2-secondary-color);
+}

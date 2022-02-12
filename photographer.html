@@ -24,20 +24,22 @@
       </div>
       <div class="trier">
         <p>Trier par</p>
-        <!-- <div class="custom-select" style="width: 200px">
+        <!-- Surround the select box within a "custom-select" DIV element.
+Remember to set the width: -->
+        <div class="custom-select" style="width: 200px">
           <select>
-            <option value="0">Popularite</option>
+            <option value="1">Popularite</option>
             <option value="1">Date</option>
             <option value="2">Titre</option>
           </select>
-        </div> -->
+        </div>
       </div>
 
-      <button type="=button" value="Popularite" onclick="tripop()">
+      <!-- <button type="=button" value="Popularite" onclick="tripop()">
         Popularite
       </button>
       <button type="=button" value="Date" onclick="tridate()">Date</button>
-      <button type="=button" value="Titre" onclick="trititre()">Titre</button>
+      <button type="=button" value="Titre" onclick="trititre()">Titre</button> -->
 
       <section class="photo_section"></section>
     </main>
@@ -132,6 +134,7 @@
       <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
     <script src="/scripts/utils/lightbox.js"></script>
+    <script src="/scripts/utils/selectMenu.js"></script>
 
     <script src="/scripts/pages/photographer.js"></script>
     <script src="/scripts/factories/media.js"></script>
