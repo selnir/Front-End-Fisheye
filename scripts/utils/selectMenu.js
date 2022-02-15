@@ -1,4 +1,4 @@
-var x, i, j, l, ll, selElmnt, a, b, c;
+var x, i, j,m, l, ll, selElmnt, a, b, c;
 /* Look for any elements with the class "custom-select": */
 x = document.getElementsByClassName("custom-select");
 l = x.length;
@@ -13,20 +13,54 @@ for (i = 0; i < l; i++) {
   /* For each element, create a new DIV that will contain the option list: */
   b = document.createElement("DIV");
   b.setAttribute("class", "select-items select-hide");
+
+  // for (m = 0; m < ll; m++){
+
+  //   selopt=document.getElementsByClassName("select-selected");
+  //   opt = document.getElementsByTagName("select")[0];
+
+
+  //   if (opt.options[m].innerHTML=selopt.innerHTML){
+  //     opt[m].removeAttribute("class");
+  //     opt[m].setAttribute("class", "same-as-selected");
+  //   }
+
+  // }
+
   for (j = 0; j < ll; j++) {
     /* For each option in the original select element,
     create a new DIV that will act as an option item: */
     c = document.createElement("DIV");
     c.innerHTML = selElmnt.options[j].innerHTML;
+    if (c.innerHTML==a.innerHTML){
+
+      c.removeAttribute("class");
+      c.setAttribute("class", "same-as-selected");
+
+    }
     c.addEventListener("click", function(e) {
         /* When an item is clicked, update the original select box,
         and the selected item: */
         var y, i, k, s, h, sl, yl;
+
+        switch (this.innerText) {
+          case 'Popularite':
+            tripop();
+            break;
+          case 'Date':
+            tridate();
+            break;
+          case 'Titre':
+            trititre();
+            break;
+        }
+        this.innerHTML=="Popularite"
         s = this.parentNode.parentNode.getElementsByTagName("select")[0];
         sl = s.length;
         h = this.parentNode.previousSibling;
         for (i = 0; i < sl; i++) {
           if (s.options[i].innerHTML == this.innerHTML) {
+
             s.selectedIndex = i;
             h.innerHTML = this.innerHTML;
             y = this.parentNode.getElementsByClassName("same-as-selected");

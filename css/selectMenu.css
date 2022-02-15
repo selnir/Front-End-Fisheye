@@ -1,3 +1,6 @@
+@import "./typographie.css";
+@import "./variable.css";
+
 /* The container must be positioned relative: */
 .custom-select {
   position: relative;
@@ -9,7 +12,8 @@
 }
 
 .select-selected {
-  background-color: DodgerBlue;
+  background-color: #901c1c;
+  border-radius: 5px 5px 5px 5px;
 }
 
 /* Style the arrow inside the select element: */
@@ -43,11 +47,12 @@
 /* Style items (options): */
 .select-items {
   position: absolute;
-  background-color: DodgerBlue;
+  background-color: #901c1c;
   top: 100%;
   left: 0;
   right: 0;
   z-index: 99;
+  border-radius: 0 0 5px 5px;
 }
 
 /* Hide the items when the select box is closed: */
@@ -58,4 +63,7 @@
 .select-items div:hover,
 .same-as-selected {
   background-color: rgba(0, 0, 0, 0.1);
+}
+.same-as-selected {
+  display: none;
 }
