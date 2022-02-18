@@ -6,7 +6,7 @@ function photographerFactory(data) {
 
     function getUserCardDOM() {
         const article = document.createElement( 'article' );
-        const url=`/photographer.html?idphoto=${id}`;
+        const url=`photographer.html?idphoto=${id}`;
         const a=document.createElement('a');
         a.setAttribute('href',url);
         const img = document.createElement( 'img' );
