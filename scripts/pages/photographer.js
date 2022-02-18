@@ -217,7 +217,7 @@ function addlikes(idfig){
     const liketothtml=document.querySelector(".price_day").previousElementSibling;
     oldliketot=parseInt(liketothtml.firstChild.nodeValue);
     newliketot=oldliketot+1;
-    liketothtml.innerHTML=`${newliketot}<img src="assets/icons/favorite-24px 1black.svg">`;
+    liketothtml.innerHTML=`${newliketot}<img src="assets/icons/favorite-24px 1black.svg" alt="likes">`;
 }
 
 //Mettre le code JavaScript lié à la page photographer.html
@@ -284,6 +284,7 @@ if(photo.photographerId==getIDphotographer())
 
                 userCardDOM.childNodes[1].removeChild(userCardDOM.childNodes[1].childNodes[2]);
                 userCardDOM.className="mySlides";
+                userCardDOM.setAttribute("aria-labelledby",`${photo.title},closeup view`)
 
                 modalContent.appendChild(userCardDOM);
                 }
@@ -303,7 +304,7 @@ if(photographer.id==getIDphotographer())
             const picture = `Sample_Photos/Photographers ID Photos/${portrait}`;
             const photoSection = document.querySelector(".photograph-header");
             const displaydata=`<article><h1>${name}</h1><p class=local>${city},${country}</p><p class=tagline>${tagline}</p></article>`;
-            const displayimg=`<img src="${picture}">`;
+            const displayimg=`<img src="${picture}" alt="${name}">`;
             const button_contact=document.querySelector(".contact_button");
             button_contact.insertAdjacentHTML("beforebegin",displaydata);
             button_contact.insertAdjacentHTML("afterend",displayimg);
