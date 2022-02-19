@@ -264,6 +264,8 @@ if(photo.photographerId==getIDphotographer())
         const mediamodel = mediaFactory(photo);
         const userCardDOM = mediamodel.getUsermediaDOM();
         userCardDOM.childNodes[0].setAttribute("onclick",nbreslide);
+        userCardDOM.setAttribute("aria-label",`${photo.title},closeup view`)
+
 
         photoSection.appendChild(userCardDOM);
         }
@@ -284,7 +286,7 @@ if(photo.photographerId==getIDphotographer())
 
                 userCardDOM.childNodes[1].removeChild(userCardDOM.childNodes[1].childNodes[2]);
                 userCardDOM.className="mySlides";
-                userCardDOM.setAttribute("aria-labelledby",`${photo.title},closeup view`)
+                userCardDOM.setAttribute("aria-label",`${photo.title}`)
 
                 modalContent.appendChild(userCardDOM);
                 }

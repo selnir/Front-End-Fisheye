@@ -23,33 +23,57 @@
 
 /* Style the arrow inside the select element: */
 .select-selected:after {
-  position: absolute;
+  /* position: absolute;
   content: "";
   top: 14px;
   right: 10px;
   width: 0;
   height: 0;
-  border: 6px solid transparent;
-  border-color: #fff transparent transparent transparent;
+  border: 6px solid;
+  border-color: #fff transparent transparent transparent; */
+  border-style: solid;
+  border-width: 0.15em 0.15em 0 0;
+  content: "";
+  height: 0.45em;
+  right: 15%;
+  position: absolute;
+  top: 40%;
+  transform: rotate(-45deg);
+  vertical-align: top;
+  width: 0.45em;
+  transform: rotate(135deg);
 }
 
 /* Point the arrow upwards when the select box is open (active): */
 .select-selected.select-arrow-active:after {
-  border-color: transparent transparent #fff transparent;
-  top: 7px;
+  /* border-color: transparent transparent #fff transparent;
+  top: 7px; */
+  border-style: solid;
+  border-width: 0.15em 0.15em 0 0;
+  content: "";
+  height: 0.45em;
+  right: 15%;
+  position: absolute;
+  top: 45%;
+  transform: rotate(-45deg);
+  width: 0.45em;
 }
 
 /* style the items (options), including the selected item: */
-.select-items div,
+.not-same-as-selected,
 .select-selected {
   color: #fff;
   padding: 8px 16px;
   border: 1px solid transparent;
-  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
   cursor: pointer;
   font-size: var(--font-size-bouton);
   font-weight: bold;
   height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-style: solid;
+  border-color: #fff;
 }
 
 /* Style items (options): */
@@ -68,10 +92,6 @@
   display: none;
 }
 
-.select-items div:hover,
-.same-as-selected {
-  background-color: rgba(0, 0, 0, 0.1);
-}
 .same-as-selected {
   display: none;
 }

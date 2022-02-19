@@ -31,16 +31,6 @@ h1 {
   margin: 0;
 }
 
-.contact_button {
-  padding: 11px;
-  width: 170px;
-  height: 70px;
-  border: none;
-  background-color: var(--background-primary-color);
-  border-radius: 5px;
-  cursor: pointer;
-}
-
 .photograph-header h1 {
   padding: 0%;
   margin: 0%;
@@ -68,9 +58,10 @@ figure img {
 }
 
 .photo_section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  margin-left: 100px;
 }
 
 .photograph-header .price {

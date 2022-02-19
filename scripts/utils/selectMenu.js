@@ -31,6 +31,7 @@ for (i = 0; i < l; i++) {
     /* For each option in the original select element,
     create a new DIV that will act as an option item: */
     c = document.createElement("DIV");
+    c.setAttribute("class", "not-same-as-selected");
     c.innerHTML = selElmnt.options[j].innerHTML;
     if (c.innerHTML==a.innerHTML){
 
@@ -41,7 +42,8 @@ for (i = 0; i < l; i++) {
     c.addEventListener("click", function(e) {
         /* When an item is clicked, update the original select box,
         and the selected item: */
-        var y, i, k, s, h, sl, yl;
+        var y, i, k, s, h, sl, yl,m,n;
+        this.innerHTML=="Popularite"
 
         switch (this.innerText) {
           case 'Popularite':
@@ -54,11 +56,14 @@ for (i = 0; i < l; i++) {
             trititre();
             break;
         }
-        this.innerHTML=="Popularite"
         s = this.parentNode.parentNode.getElementsByTagName("select")[0];
         sl = s.length;
         h = this.parentNode.previousSibling;
         for (i = 0; i < sl; i++) {
+          //ajouter modification des div avec la class not same as selected
+          // m=document.getElementsByClassName("select-items");
+          // n=m.getElementsByTagName("div");
+          // n[i].setAttribute("class", "not-same-as-selected");
           if (s.options[i].innerHTML == this.innerHTML) {
 
             s.selectedIndex = i;
@@ -66,7 +71,7 @@ for (i = 0; i < l; i++) {
             y = this.parentNode.getElementsByClassName("same-as-selected");
             yl = y.length;
             for (k = 0; k < yl; k++) {
-              y[k].removeAttribute("class");
+              y[k].setAttribute("class", "not-same-as-selected");
             }
             this.setAttribute("class", "same-as-selected");
             break;
@@ -74,6 +79,7 @@ for (i = 0; i < l; i++) {
         }
         h.click();
     });
+    
     b.appendChild(c);
   }
 
