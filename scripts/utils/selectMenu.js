@@ -2,7 +2,9 @@ var x, i, j,m, l, ll, selElmnt, a, b, c;
 /* Look for any elements with the class "custom-select": */
 x = document.getElementsByClassName("custom-select");
 l = x.length;
+
 for (i = 0; i < l; i++) {
+
   selElmnt = x[i].getElementsByTagName("select")[0];
   ll = selElmnt.length;
   /* For each element, create a new DIV that will act as the selected item: */
@@ -30,6 +32,7 @@ for (i = 0; i < l; i++) {
   for (j = 0; j < ll; j++) {
     /* For each option in the original select element,
     create a new DIV that will act as an option item: */
+
     c = document.createElement("DIV");
     c.setAttribute("class", "not-same-as-selected");
     c.innerHTML = selElmnt.options[j].innerHTML;
@@ -43,7 +46,7 @@ for (i = 0; i < l; i++) {
         /* When an item is clicked, update the original select box,
         and the selected item: */
         var y, i, k, s, h, sl, yl,m,n;
-        this.innerHTML=="Popularite"
+        this.innerHTML=="Popularite";
 
         switch (this.innerText) {
           case 'Popularite':
