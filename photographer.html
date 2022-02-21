@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="fr">
   <head>
     <link href="css/photographer.css" rel="stylesheet" type="text/css" />
 
@@ -24,10 +25,10 @@
           Contactez-moi
         </button>
       </div>
-      <div class="trier">
+      <div id="trier">
         <p>Trier par</p>
         <div class="custom-select" style="width: 200px">
-          <select aria-labelledby="Order by">
+          <select aria-labelledby="trier">
             <option value="0">Popularite</option>
 
             <option value="1">Date</option>
@@ -44,7 +45,11 @@
       <div class="modal">
         <header>
           <h2>Contactez-moi</h2>
-          <img src="assets/icons/close.svg" onclick="closeModal()" />
+          <img
+            src="assets/icons/close.svg"
+            alt="close"
+            onclick="closeModal()"
+          />
         </header>
         <form
           id="reserve"
