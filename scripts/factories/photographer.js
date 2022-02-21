@@ -6,6 +6,7 @@ function photographerFactory(data) {
 
     function getUserCardDOM() {
         const article = document.createElement( 'article' );
+        const section=document.createElement('section');
         const url=`photographer.html?idphoto=${id}`;
         const a=document.createElement('a');
         a.setAttribute('href',url);
@@ -25,9 +26,11 @@ function photographerFactory(data) {
         article.appendChild(a),
         a.appendChild(img);
         a.appendChild(h2);
-        article.appendChild(p1);
-        article.appendChild(p2);
-        article.appendChild(p3);
+        section.appendChild(p1);
+        section.appendChild(p2);
+        section.appendChild(p3);
+        article.appendChild(section);
+
 
         return (article);
     }

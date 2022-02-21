@@ -21,32 +21,26 @@ header {
 
 .photographer_section {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-between;
   gap: 70px;
-  width: 100%;
-  margin: 0 0 100px 0;
+  grid-template-columns: auto auto auto;
+  margin: 0 100px 100px 100px;
 }
 
 .photographer_section article {
-  justify-self: center;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
 }
 .photographer_section a {
-  text-decoration: none;
-  justify-self: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   padding: 0%;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  align-items: center;
 }
 
 .photographer_section article h2 {
-  width: 100%;
-  text-align: center;
   padding: 0%;
   margin: 0%;
 }
@@ -55,21 +49,15 @@ header {
   height: 200px;
   width: 200px;
   border-radius: 50%;
-  text-align: center;
+  margin-bottom: 20px;
 }
-.photographer_section .local {
-  width: 100%;
-  text-align: center;
-}
-.photographer_section .tagline {
-  width: 100%;
-  text-align: center;
-}
-.photographer_section .price {
-  width: 100%;
-  text-align: center;
-}
+
 .photographer_section p {
   margin: 0%;
   padding: 0%;
+}
+.photographer_section article section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
