@@ -46,7 +46,6 @@ function validate(){
         console.log(msg.value);
         idphoto.value=getIDphotographer();
         return true
-
       }
       else
       {

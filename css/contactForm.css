@@ -87,3 +87,6 @@ textarea {
   background-color: var(--background-secondary-color);
   color: black;
 }
+.formData:nth-child(1) {
+  display: none;
+}
