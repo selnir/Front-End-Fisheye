@@ -13,6 +13,8 @@ header {
   align-items: center;
   height: 90px;
   margin: 20px 100px 100px 100px;
+  padding-left: 3%;
+  padding-right: 3%;
 }
 
 .logo {
