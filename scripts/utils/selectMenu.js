@@ -1,4 +1,9 @@
 var x, i, j,m, l, ll, selElmnt, a, b, c;
+var hrelement1=document.createElement("hr");
+var hrelement2=document.createElement("hr");
+
+
+
 /* Look for any elements with the class "custom-select": */
 x = document.getElementsByClassName("custom-select");
 l = x.length;
@@ -16,18 +21,6 @@ for (i = 0; i < l; i++) {
   b = document.createElement("DIV");
   b.setAttribute("class", "select-items select-hide");
 
-  // for (m = 0; m < ll; m++){
-
-  //   selopt=document.getElementsByClassName("select-selected");
-  //   opt = document.getElementsByTagName("select")[0];
-
-
-  //   if (opt.options[m].innerHTML=selopt.innerHTML){
-  //     opt[m].removeAttribute("class");
-  //     opt[m].setAttribute("class", "same-as-selected");
-  //   }
-
-  // }
 
   for (j = 0; j < ll; j++) {
     /* For each option in the original select element,
@@ -36,12 +29,15 @@ for (i = 0; i < l; i++) {
     c = document.createElement("DIV");
     c.setAttribute("class", "not-same-as-selected");
     c.innerHTML = selElmnt.options[j].innerHTML;
-    if (c.innerHTML==a.innerHTML){
 
+    
+
+    if (c.innerHTML==a.innerHTML){
       c.removeAttribute("class");
       c.setAttribute("class", "same-as-selected");
-
     }
+
+
     c.addEventListener("click", function(e) {
         /* When an item is clicked, update the original select box,
         and the selected item: */
@@ -63,10 +59,7 @@ for (i = 0; i < l; i++) {
         sl = s.length;
         h = this.parentNode.previousSibling;
         for (i = 0; i < sl; i++) {
-          //ajouter modification des div avec la class not same as selected
-          // m=document.getElementsByClassName("select-items");
-          // n=m.getElementsByTagName("div");
-          // n[i].setAttribute("class", "not-same-as-selected");
+
           if (s.options[i].innerHTML == this.innerHTML) {
 
             s.selectedIndex = i;
@@ -75,8 +68,31 @@ for (i = 0; i < l; i++) {
             yl = y.length;
             for (k = 0; k < yl; k++) {
               y[k].setAttribute("class", "not-same-as-selected");
+              // b.insertBefore(hrelement,element);
+
             }
             this.setAttribute("class", "same-as-selected");
+            // var Ghrelement=b.getElementsByTagName("HR");
+            b.removeChild(hrelement1);
+            b.removeChild(hrelement2);
+
+            // b.removechild(Ghrelement);
+            var blastclass=b.lastChild.getAttribute("class");
+            b.insertAdjacentElement("afterbegin",hrelement1)
+
+            switch (blastclass) {
+              case 'not-same-as-selected':
+                b.lastChild.insertAdjacentElement("beforebegin",hrelement2);
+            
+                break;
+              case 'same-as-selected':
+                b.lastChild.previousSibling.insertAdjacentElement("beforebegin",hrelement2);
+            
+            
+                break;
+            
+            }
+            
             break;
           }
         }
@@ -84,7 +100,50 @@ for (i = 0; i < l; i++) {
     });
     
     b.appendChild(c);
+    
+    var blastclass=b.lastChild.getAttribute("class");
+
+    b.insertAdjacentElement("afterbegin",hrelement1)
+
+    switch (blastclass) {
+      case 'not-same-as-selected':
+        b.lastChild.insertAdjacentElement("beforebegin",hrelement2);
+    
+        break;
+      case 'same-as-selected':
+        b.lastChild.previousSibling.insertAdjacentElement("beforebegin",hrelement2);
+    
+    
+        break;
+    
+    }
+
+    //recuperer la valeur de classname de c pour afficher ou non le hr
+    
   }
+
+
+
+
+    // NotSameAsSelected=b.getElementsByClassName("not-same-as-selected");
+    // NotSameAsSelectednode=Array.from(NotSameAsSelected);
+    // NotSameAsSelectednode.forEach((element,index )=> {
+
+    //   var hrelement=document.createElement("hr");
+
+    //     b.insertBefore(hrelement,element);
+        
+    //   });
+
+    // SameAsSelected=b.getElementsByClassName("same-as-selected");
+    // SameAsSelectednode=Array.from(SameAsSelected);
+    // SameAsSelectednode.forEach((element,index )=> {
+
+    //     element.previousSibling.style.display="none";
+        
+    //   });
+
+  
 
   x[i].appendChild(b);
   a.addEventListener("click", function(e) {

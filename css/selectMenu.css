@@ -73,7 +73,7 @@
   justify-content: space-between;
   align-items: center;
   border-style: solid;
-  border-color: #fff;
+  padding-left: 15%;
 }
 
 /* Style items (options): */
@@ -94,4 +94,9 @@
 
 .same-as-selected {
   display: none;
+}
+
+hr {
+  color: #fff;
+  width: 80%;
 }
