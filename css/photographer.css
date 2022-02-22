@@ -5,7 +5,7 @@
 @import "./variable.css";
 
 body {
-  margin: 0;
+  margin: 100px;
 }
 
 header {
@@ -22,7 +22,6 @@ h1 {
 
 .logo {
   height: 50px;
-  margin-left: 100px;
 }
 
 .photograph-header {
@@ -31,16 +30,10 @@ h1 {
   margin: 0;
 }
 
-.photograph-header h1 {
-  padding: 0%;
-  margin: 0%;
-}
-
 main figure {
-  width: 320px;
-  height: 280px;
   margin: 0;
-  margin-bottom: 40px;
+  width: 90%;
+  height: 50vh;
 }
 figure figcaption {
   display: flex;
@@ -51,17 +44,26 @@ figcaption {
   display: flex;
   align-content: center;
 }
+figure figcaption img {
+  height: auto;
+  width: auto;
+}
 
-figure img {
+.photo_section figure img,
+video {
   border-radius: 5px;
   object-fit: fill;
+  cursor: pointer;
+  height: 90%;
+  width: 100%;
 }
 
 .photo_section {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  justify-content: space-between;
   width: 100%;
-  margin-left: 100px;
 }
 
 .photograph-header .price {
@@ -94,9 +96,6 @@ figure img {
 #main {
   display: flex;
   flex-direction: column;
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-bottom: 70px;
 }
 
 aside {
@@ -125,11 +124,12 @@ figcaption button {
 .likesarea {
   display: flex;
   align-items: center;
+  cursor: pointer;
+}
+.likesarea img {
+  width: 100%;
+  height: 100%;
 }
 .date {
   display: none;
-}
-.trier {
-  display: flex;
-  align-items: center;
 }
