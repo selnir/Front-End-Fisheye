@@ -37,9 +37,9 @@ function mediaFactory(data)
             mediaHTML=getVideo(movie);
         }
 
-       figure.innerHTML=`<span onclick=""> ${mediaHTML}</span><figcaption>
-       <p>${title}</p><div class="likesarea"><p>${likes}</p>
-       <button" type="button" onclick="addlikes(${id})">
+       figure.innerHTML=`<button onclick=""> ${mediaHTML}</button><figcaption>
+       <p>${title}</p><div class="likesarea" ><p>${likes}</p>
+       <button onclick="addlikes(${id})" tabindex="0">
        <img src="assets/icons/favorite-24px 1.svg" />
        </button></div><p class="date">${date}</p>
        </figcaption>`;

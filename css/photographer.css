@@ -49,13 +49,23 @@ figure figcaption img {
   width: auto;
 }
 
-.photo_section figure img,
-video {
+.photo_section figure button {
   border-radius: 5px;
   object-fit: fill;
-  cursor: pointer;
   height: 90%;
   width: 100%;
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+.photo_section figure img,
+video {
+  width: 100%;
+  height: 100%;
 }
 
 .photo_section {
@@ -132,4 +142,10 @@ figcaption button {
 }
 .date {
   display: none;
+}
+#zone_trie {
+  display: flex;
+  width: 100%;
+  border-style: solid;
+  align-items: center;
 }

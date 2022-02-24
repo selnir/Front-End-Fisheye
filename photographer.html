@@ -25,9 +25,11 @@
           Contactez-moi
         </button>
       </div>
-      <div id="trier">
-        <p>Trier par</p>
-        <div class="custom-select" style="width: 200px">
+      <span id="zone_trie">
+      <label for="trier">Trier par</label>
+    <input type="hidden" name="trier" id="trier">
+        <span></span>
+        <div class="custom-select" style="width: 200px" tabindex="0">
           <select aria-labelledby="trier">
             <option value="0">Popularite</option>
 
@@ -36,19 +38,21 @@
             <option value="2">Titre</option>
           </select>
         </div>
-      </div>
+      </input>
+    </span>
 
       <section class="photo_section"></section>
     </main>
 
     <div id="contact_modal">
-      <div class="modal">
+      <div class="modal" aria-labelledby="Contactez-moi">
         <header>
-          <h2>Contactez-moi</h2>
+          <h2 id="Contactez-moi">Contactez-moi</h2>
           <img
             src="assets/icons/close.svg"
             alt="close"
             onclick="closeModal()"
+            aria-label="Close Contact Form"
           />
         </header>
         <form
@@ -77,6 +81,7 @@
               id="first"
               name="first"
               minlength="2"
+              aria-labelledby="first"
             /><br />
           </div>
           <div class="unvalid_first">
@@ -91,6 +96,7 @@
               type="text"
               id="last"
               name="last"
+              aria-labelledby="last"
             /><br />
           </div>
           <div class="unvalid_family">
@@ -115,6 +121,7 @@
               class="text-control"
               id="Msg"
               name="Msg"
+              aria-labelledby="Msg"
               onfocus="checkmsg(Msg)"
               onfocusout="checkmsg(Msg)"
             ></textarea
@@ -127,12 +134,12 @@
       </div>
     </div>
     <div id="myModal" class="modal_lightbox">
-      <span class="close cursor" onclick="closeModal_lightbox()">&times;</span>
+      <span class="close cursor" onclick="closeModal_lightbox()" aria-label="close dialog">&times;</span>
 
       <div class="modal-content"></div>
 
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      <a class="prev" onclick="plusSlides(-1)" aria-label="previous image">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)" aria-label="next image">&#10095;</a>
     </div>
 
     <script src="scripts/pages/photographer.js"></script>

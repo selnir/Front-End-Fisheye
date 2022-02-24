@@ -1,6 +1,7 @@
 body {
   font-family: "DM Sans", sans-serif;
 }
+
 h1 {
   color: var(--font-secondary-color);
 }
@@ -41,4 +42,7 @@ aside {
 }
 .photographer_section .price {
   color: var(--font-2-secondary-color);
+}
+:focus {
+  outline: 3px solid var(--font-primary-color);
 }
