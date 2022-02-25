@@ -23,8 +23,6 @@ function displayModal() {
     unvalid_family.style.display="none";
     unvalid_email.style.display="none";
     unvalid_msg.style.display="none";
-
-
 }
 
 function closeModal() {

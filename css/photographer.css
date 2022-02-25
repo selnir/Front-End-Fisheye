@@ -15,11 +15,9 @@ header {
   justify-content: space-between;
   align-items: center;
   height: 90px;
-  margin: 20px 100px 100px 100px;
-}
-
-h1 {
-  margin-right: 100px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  width: 100%;
 }
 
 .logo {
@@ -27,14 +25,17 @@ h1 {
 }
 
 .photograph-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   background-color: var(--background-2-secondary-color);
   height: 300px;
-  margin: 0;
+  margin-bottom: 50px;
 }
 
 main figure {
   margin: 0;
-  width: 90%;
+  width: 100%;
   height: 50vh;
 }
 figure figcaption {
@@ -72,10 +73,9 @@ video {
 
 .photo_section {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 30px;
   justify-content: space-between;
-  width: 100%;
+  gap: 70px;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .photograph-header .price {
@@ -97,12 +97,6 @@ video {
   width: 200px;
   border-radius: 50%;
   text-align: center;
-}
-.photograph-header {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: 0%;
 }
 
 #main {
@@ -147,8 +141,8 @@ figcaption button {
 }
 #zone_trie {
   display: flex;
-  width: 20%;
+  width: 15%;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
