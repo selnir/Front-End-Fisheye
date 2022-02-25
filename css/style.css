@@ -3,7 +3,9 @@
 
 body {
   font-family: "DM Sans", sans-serif;
-  margin: 0;
+  margin-right: 100px;
+  margin-left: 100px;
+  margin-bottom: 50px;
 }
 
 header {
@@ -12,9 +14,10 @@ header {
   justify-content: space-between;
   align-items: center;
   height: 90px;
-  margin: 20px 100px 100px 100px;
   padding-left: 3%;
   padding-right: 3%;
+  margin-top: 20px;
+  margin-bottom: 50px;
 }
 
 .logo {
@@ -26,7 +29,6 @@ header {
   justify-content: space-between;
   gap: 70px;
   grid-template-columns: auto auto auto;
-  margin: 0 100px 100px 100px;
 }
 
 .photographer_section article {
