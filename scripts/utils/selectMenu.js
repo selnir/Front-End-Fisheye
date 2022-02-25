@@ -13,7 +13,7 @@ for (i = 0; i < l; i++) {
   selElmnt = x[i].getElementsByTagName("select")[0];
   ll = selElmnt.length;
   /* For each element, create a new DIV that will act as the selected item: */
-  a = document.createElement("DIV");
+  a = document.createElement("button");
   a.setAttribute("class", "select-selected");
   a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
   x[i].appendChild(a);
@@ -26,7 +26,7 @@ for (i = 0; i < l; i++) {
     /* For each option in the original select element,
     create a new DIV that will act as an option item: */
 
-    c = document.createElement("DIV");
+    c = document.createElement("button");
     c.setAttribute("class", "not-same-as-selected");
     c.innerHTML = selElmnt.options[j].innerHTML;
 

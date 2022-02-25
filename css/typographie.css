@@ -26,7 +26,7 @@ figure figcaption {
 }
 #main p {
   font-size: var(--font-size-bouton);
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 aside {
   background-color: var(--background-secondary-color);

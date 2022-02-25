@@ -7,6 +7,16 @@
   font-family: Arial;
   width: 170px;
 }
+.custom-select button {
+  color: inherit;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  width: 100%;
+  font-size: var(--font-size-bouton);
+  color: #fff;
+  font-weight: bold;
+}
 
 .custom-select select {
   display: none; /*hide original SELECT element: */
@@ -75,7 +85,16 @@
   border-style: solid;
   padding-left: 15%;
 }
-
+.select-items button {
+  background: none;
+  color: inherit;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  font-size: var(--font-size-bouton);
+  color: #fff;
+  font-weight: bold;
+}
 /* Style items (options): */
 .select-items {
   position: absolute;

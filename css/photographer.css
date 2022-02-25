@@ -5,7 +5,8 @@
 @import "./variable.css";
 
 body {
-  margin: 100px;
+  margin-right: 100px;
+  margin-left: 100px;
 }
 
 header {
@@ -14,6 +15,7 @@ header {
   justify-content: space-between;
   align-items: center;
   height: 90px;
+  margin: 20px 100px 100px 100px;
 }
 
 h1 {
@@ -145,7 +147,8 @@ figcaption button {
 }
 #zone_trie {
   display: flex;
-  width: 100%;
-  border-style: solid;
+  width: 20%;
   align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
