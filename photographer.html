@@ -13,7 +13,7 @@
     />
     <title>Fisheye - photographe</title>
   </head>
-  <body>
+  <body aria-hidden="false">
     <header>
       <a href="index.html"
         ><img src="assets/images/logo.png" alt="Fisheye Home page" class="logo"
@@ -28,7 +28,6 @@
       <span id="zone_trie">
       <label for="trier">Trier par</label>
     <input type="hidden" name="trier" id="trier">
-        <span></span>
         <div class="custom-select">
           <select aria-labelledby="trier">
             <option value="0">Popularite</option>
@@ -44,16 +43,18 @@
       <section class="photo_section"></section>
     </main>
 
-    <div id="contact_modal">
+    <div id="contact_modal" aria-hidden="true" role="dialog">
       <div class="modal" aria-labelledby="Contactez-moi">
         <header>
           <h2 id="Contactez-moi">Contactez-moi</h2>
+          <button id="close_modal" >
           <img
             src="assets/icons/close.svg"
             alt="close"
             onclick="closeModal()"
             aria-label="Close Contact Form"
           />
+        </button>
         </header>
         <form
           id="reserve"
@@ -129,7 +130,7 @@
           </div>
           <div class="unvalid_msg">Veuillez ecrire un Message.</div>
 
-          <button class="contact_button" type="submit">Envoyer</button>
+          <button class="contact_button" onfocusout="startagain()" type="submit" >Envoyer</button>
         </form>
       </div>
     </div>

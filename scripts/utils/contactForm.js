@@ -18,23 +18,78 @@ var idphoto=document.forms["reserve"].elements["idphoto"];
 
 function displayModal() {
     const modal = document.getElementById("contact_modal");
-	modal.style.display = "block";
+    const body=document.querySelector("body");
+    const closebtn=document.getElementById("close_modal");
+	  modal.style.display = "block";
     unvalid_first.style.display="none";
     unvalid_family.style.display="none";
     unvalid_email.style.display="none";
     unvalid_msg.style.display="none";
-}
+    modal.setAttribute("aria-hidden","false");
+    body.setAttribute("aria-hidden","true");
+    closebtn.focus();
+
+    closebtn.addEventListener("keydown", function (event) {
+      if (event.defaultPrevented) {
+        return; // Do nothing if the event was already processed
+      }
+    
+      switch (event.key) {
+        case "Enter":
+          // Do something for "right arrow" key press.
+          closeModal();
+          break;
+        case " ":
+          closeModal();
+          // Do something for "esc" key press.
+          break;
+        default:
+          return; // Quit when this doesn't handle the key event.
+      }
+    
+      // Cancel the default action to avoid it being handled twice
+      event.preventDefault();
+    }, true);
+  
+    modal.addEventListener("keydup", function (event1) {
+      if (event1.defaultPrevented) {
+        return; // Do nothing if the event was already processed
+      }
+    
+      switch (event1.key) {
+        
+        case "Escape":
+        closeModal();
+        // Do something for "esc" key press.
+        break;
+      default:
+        return; // Quit when this doesn't handle the key event.
+    }
+      // Cancel the default action to avoid it being handled twice
+      event1.preventDefault();
+    }, true);
+  
+  
+  
+  
+  
+  }
+
 
 function closeModal() {
     const modal = document.getElementById("contact_modal");
+    const body_modal=document.querySelector("body");
+
     modal.style.display = "none";
     document.forms["reserve"].reset();
+    modal.setAttribute("aria-hidden","true");
+    body_modal.setAttribute("aria-hidden","false");
 
 }
 function validate(){
 
     //general test of the cheking form ( name email etc)
-
+      
     
       if (((checkfirst(firstname) & checkfam (familyname) &  checkemail(e_mail)&checkmsg(msg)) ==true))
       {
@@ -45,7 +100,7 @@ function validate(){
         idphoto.value=getIDphotographer();
         return true
       }
-      else
+      else  
       {
           return false;
       }
@@ -111,4 +166,11 @@ function validate(){
     return true;
 
     }
+    }
+    function startagain(){
+      const closebtn=document.getElementById("close_modal");
+
+      firstname.focus();
+      firstname.select();
+      firstname.click();      
     }
