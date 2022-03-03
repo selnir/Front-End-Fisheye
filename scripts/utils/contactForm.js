@@ -51,7 +51,7 @@ function displayModal() {
       event.preventDefault();
     }, true);
   
-    modal.addEventListener("keydup", function (event1) {
+    modal.addEventListener("keydown", function (event1) {
       if (event1.defaultPrevented) {
         return; // Do nothing if the event was already processed
       }

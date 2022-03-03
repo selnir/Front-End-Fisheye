@@ -26,8 +26,9 @@
         </button>
       </div>
       <div id="zone_trie">
-      <label for="trier">Trier par</label>
-    <input type="text" name="trier" id="trier">
+        <label for="trier">Trier par</label>
+        <input type="text" name="trier" id="trier" />
+
         <div class="custom-select">
           <select aria-labelledby="trier">
             <option value="0">Popularite</option>
@@ -37,24 +38,28 @@
             <option value="2">Titre</option>
           </select>
         </div>
-      </input>
       </div>
 
       <section class="photo_section"></section>
     </main>
 
-    <div id="contact_modal" aria-hidden="true" >
-      <div class="modal" aria-labelledby="Contactez-moi" tabindex="-1" role="dialog">
+    <div id="contact_modal" aria-hidden="true">
+      <div
+        class="modal"
+        aria-labelledby="Contactez-moi"
+        tabindex="-1"
+        role="dialog"
+      >
         <header>
           <h2 id="Contactez-moi">Contactez-moi</h2>
-          <button id="close_modal" >
-          <img
-            src="assets/icons/close.svg"
-            alt="close"
-            onclick="closeModal()"
-            aria-label="Close Contact Form"
-          />
-        </button>
+          <button id="close_modal">
+            <img
+              src="assets/icons/close.svg"
+              alt="close"
+              onclick="closeModal()"
+              aria-label="Close Contact Form"
+            />
+          </button>
         </header>
         <form
           id="reserve"
@@ -130,17 +135,32 @@
           </div>
           <div class="unvalid_msg">Veuillez ecrire un Message.</div>
 
-          <button class="contact_button" onfocusout="startagain()" type="submit" >Envoyer</button>
+          <button
+            class="contact_button"
+            onfocusout="startagain()"
+            type="submit"
+          >
+            Envoyer
+          </button>
         </form>
       </div>
     </div>
     <div id="myModal" class="modal_lightbox">
-      <span class="close cursor" onclick="closeModal_lightbox()" aria-label="close dialog">&times;</span>
+      <span
+        class="close cursor"
+        onclick="closeModal_lightbox()"
+        aria-label="close dialog"
+        >&times;</span
+      >
 
       <div class="modal-content"></div>
 
-      <a class="prev" onclick="plusSlides(-1)" aria-label="previous image">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)" aria-label="next image">&#10095;</a>
+      <a class="prev" onclick="plusSlides(-1)" aria-label="previous image"
+        >&#10094;</a
+      >
+      <a class="next" onclick="plusSlides(1)" aria-label="next image"
+        >&#10095;</a
+      >
     </div>
 
     <script src="scripts/pages/photographer.js"></script>
