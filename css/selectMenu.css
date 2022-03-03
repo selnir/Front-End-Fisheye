@@ -6,6 +6,7 @@
   position: relative;
   font-family: Arial;
   width: 170px;
+  display: flex;
 }
 .custom-select button {
   color: inherit;
@@ -33,14 +34,6 @@
 
 /* Style the arrow inside the select element: */
 .select-selected:after {
-  /* position: absolute;
-  content: "";
-  top: 14px;
-  right: 10px;
-  width: 0;
-  height: 0;
-  border: 6px solid;
-  border-color: #fff transparent transparent transparent; */
   border-style: solid;
   border-width: 0.15em 0.15em 0 0;
   content: "";
@@ -56,8 +49,6 @@
 
 /* Point the arrow upwards when the select box is open (active): */
 .select-selected.select-arrow-active:after {
-  /* border-color: transparent transparent #fff transparent;
-  top: 7px; */
   border-style: solid;
   border-width: 0.15em 0.15em 0 0;
   content: "";
