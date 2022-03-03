@@ -169,8 +169,6 @@ function validate(){
     }
     function startagain(){
       const closebtn=document.getElementById("close_modal");
-
+      firstname.
       firstname.focus();
-      firstname.select();
-      firstname.click();      
     }

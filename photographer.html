@@ -25,7 +25,7 @@
           Contactez-moi
         </button>
       </div>
-      <span id="zone_trie">
+      <div id="zone_trie">
       <label for="trier">Trier par</label>
     <input type="hidden" name="trier" id="trier">
         <div class="custom-select">
@@ -38,13 +38,13 @@
           </select>
         </div>
       </input>
-    </span>
+      </div>
 
       <section class="photo_section"></section>
     </main>
 
-    <div id="contact_modal" aria-hidden="true" role="dialog">
-      <div class="modal" aria-labelledby="Contactez-moi">
+    <div id="contact_modal" aria-hidden="true" >
+      <div class="modal" aria-labelledby="Contactez-moi" tabindex="-1"role="dialog">
         <header>
           <h2 id="Contactez-moi">Contactez-moi</h2>
           <button id="close_modal" >
