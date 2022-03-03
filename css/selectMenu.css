@@ -119,3 +119,6 @@ hr {
   color: #fff;
   width: 80%;
 }
+#trier {
+  display: none;
+}
