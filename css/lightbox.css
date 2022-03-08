@@ -54,7 +54,7 @@ video {
 }
 
 /* The Close Button */
-.close {
+#close_cursor {
   color: #901c1c;
   position: absolute;
   top: 80px;
@@ -64,8 +64,8 @@ video {
   font-weight: lighter;
 }
 
-.close:hover,
-.close:focus {
+#close_cursor:hover,
+#close_cursor:focus {
   color: #999;
   text-decoration: none;
   cursor: pointer;

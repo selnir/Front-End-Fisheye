@@ -42,8 +42,8 @@ function mediaFactory(data)
 
        figure.innerHTML=`<button onclick=""> ${mediaHTML}</button><figcaption>
        <p>${title}</p><div class="likesarea" ><p>${likes}</p>
-       <button onclick="addlikes(${id})" tabindex="0">
-       <img src="assets/icons/favorite-24px 1.svg" />
+       <button onclick="addlikes(${id})" >
+       <img src="assets/icons/favorite-24px 1.svg" alt="likes" />
        </button></div><p class="date">${date}</p>
        </figcaption>`;
 

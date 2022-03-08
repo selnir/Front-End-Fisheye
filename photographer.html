@@ -25,8 +25,9 @@
           Contactez-moi
         </button>
       </div>
-      <div id="zone_trie">
+      <div id="zone_trie" tabindex="0" aria-label="Trier par">
         <label for="trier">Trier par</label>
+
         <div class="custom-select">
           <select id="trier" aria-labelledby="trier">
             <option value="0">Popularite</option>
@@ -133,7 +134,7 @@
     </div>
     <div id="myModal" class="modal_lightbox">
       <span
-        class="close cursor"
+        id="close_cursor"
         onclick="closeModal_lightbox()"
         tabindex="1"
         aria-label="close dialog"

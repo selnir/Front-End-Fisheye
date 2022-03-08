@@ -2,6 +2,9 @@ function openModal_lightbox() {
 
     document.getElementById("myModal").style.display = "block";
     document.body.style.overflow="hidden";
+    const closebtn1=document.getElementById("close_cursor");
+    closebtn1.focus();
+
   }
 
 
