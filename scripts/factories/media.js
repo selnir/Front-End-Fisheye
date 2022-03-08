@@ -1,13 +1,16 @@
 
-
+//fonction de construction  de l'image
 function getPhoto(src)
 {
-    const pictureHTML=`<img src=${src} width="320" height="240">` ;
+    const pictureHTML=`<img src=${src}>` ;
     return pictureHTML;
 }
+
+//fonction de construction  de l'video
+
 function getVideo(src)
 {
-    const videoHTML=`<video width="320" height="240" controls>
+    const videoHTML=`<video controls>
    <source src=${src} type=video/mp4> </video>` ;
     return videoHTML;
   

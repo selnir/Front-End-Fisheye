@@ -65,3 +65,34 @@ header {
   flex-direction: column;
   align-items: center;
 }
+@media (max-width: 1024px) {
+  .photographer_section {
+    grid-template-columns: auto auto;
+  }
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-style: solid;
+  }
+}
+
+@media (max-width: 600px) {
+  .photographer_section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-style: solid;
+  }
+  .custom-select {
+    border-style: solid;
+  }
+}

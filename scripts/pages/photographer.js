@@ -1,15 +1,16 @@
 
+
+// fonction de trie par popularite
+
 function tripop(){
 
     const modalContent=document.querySelector(".modal-content");
     const photo_section=document.querySelector(".photo_section");
+    // recuperation des figures chargee
     const TabFigNode=Array.from(photo_section.childNodes);
     const clone=new Array(TabFigNode.length);
 
-    // const PopNode=TabFigNode[10].childNodes[1].childNodes[2].childNodes[0].textContent;
-    // photo_section.innerHTML=`${PopNode}`;
-
-
+// function de trie du tableaux de figure
     TabFigNode.sort(function compare(a, b) { 
         if (parseInt(a.childNodes[1].childNodes[2].childNodes[0].textContent) < parseInt(b.childNodes[1].childNodes[2].childNodes[0].textContent))
            return 1;
@@ -18,16 +19,16 @@ function tripop(){
         return 0;
       });
 
-    
+    // copie du tableaux dans un autre tableaux
     TabFigNode.forEach((figure,index)=>{
         
         const figById=document.getElementById(`${figure.getAttribute("id")}`);
         clone[index] =figById.cloneNode(true);
 
     });
-
+    // effacer les figures deja present dans la page
     photo_section.innerHTML="";
-
+//charge les figures trier dans la page
     clone.forEach((figurehtml)=>{
 
         photo_section.appendChild(figurehtml);
@@ -35,7 +36,9 @@ function tripop(){
 
     i=0;
 
+//appliquer les changements sur la modal lightbox
 
+//construction de la figure utiliser dans la lightbox
     TabFigNode.forEach((figure,index)=>{
         
         i=i+1;
@@ -49,8 +52,10 @@ function tripop(){
 
     });
     i=0;
+    // effacer les figures deja present dans la modal lightbox
 
     modalContent.innerHTML=""
+//charge les figures trier dans la modal lightbox
 
 
     clone.forEach((figurehtml,index)=>{
@@ -83,8 +88,6 @@ function tridate(){
         return 0;
       });
 
-    // const PopNode=TabFigNode[0].childNodes[1].childNodes[3].textContent;
-    // photo_section.innerHTML=`${PopNode}`;
     
     TabFigNode.forEach((figure,index)=>{
         
@@ -151,8 +154,6 @@ function trititre(){
         return 0;
       });
 
-    // const PopNode=TabFigNode[0].childNodes[1].childNodes[1].textContent;
-    // photo_section.innerHTML=`${PopNode}`;
     
     TabFigNode.forEach((figure,index)=>{
         
