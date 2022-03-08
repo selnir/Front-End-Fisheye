@@ -74,7 +74,6 @@ header {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    border-style: solid;
   }
 }
 
@@ -90,9 +89,5 @@ header {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    border-style: solid;
-  }
-  .custom-select {
-    border-style: solid;
   }
 }
