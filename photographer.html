@@ -53,7 +53,12 @@
             />
           </button>
         </header>
-        <form id="reserve" name="reserve" method="get" onsubmit="validate();">
+        <form
+          id="reserve"
+          name="reserve"
+          method="get"
+          onsubmit="return validate();"
+        >
           <div class="formData" aria-hidden="true">
             <br />
             <input
@@ -122,7 +127,7 @@
           </div>
           <div class="unvalid_msg">Veuillez ecrire un Message.</div>
 
-          <button class="contact_button" type="submit">Envoyer</button>
+          <button class="contact_button">Envoyer</button>
         </form>
       </div>
     </div>

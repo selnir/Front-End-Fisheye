@@ -25,53 +25,8 @@ function displayModal() {
     unvalid_family.style.display="none";
     unvalid_email.style.display="none";
     unvalid_msg.style.display="none";
-    modal.setAttribute("aria-hidden","false");
-    body.setAttribute("aria-hidden","true");
-    closebtn.focus();
 
-    closebtn.addEventListener("keydown", function (event) {
-      if (event.defaultPrevented) {
-        return; // Do nothing if the event was already processed
-      }
-    
-      switch (event.key) {
-        case "Enter":
-          // Do something for "right arrow" key press.
-          closeModal();
-          break;
-        case " ":
-          closeModal();
-          // Do something for "esc" key press.
-          break;
-        default:
-          return; // Quit when this doesn't handle the key event.
-      }
-    
-      // Cancel the default action to avoid it being handled twice
-      event.preventDefault();
-    }, true);
-  
-    modal.addEventListener("keydown", function (event1) {
-      if (event1.defaultPrevented) {
-        return; // Do nothing if the event was already processed
-      }
-    
-      switch (event1.key) {
-        
-        case "Escape":
-        closeModal();
-        // Do something for "esc" key press.
-        break;
-      default:
-        return; // Quit when this doesn't handle the key event.
-    }
-      // Cancel the default action to avoid it being handled twice
-      event1.preventDefault();
-    }, true);
-  
-  
-  
-  
+    closebtn.focus();
   
   }
 
@@ -82,8 +37,7 @@ function closeModal() {
 
     modal.style.display = "none";
     document.forms["reserve"].reset();
-    modal.setAttribute("aria-hidden","true");
-    body_modal.setAttribute("aria-hidden","false");
+
 
 }
 function validate(){
@@ -98,12 +52,10 @@ function validate(){
         console.log(e_mail.value);
         console.log(msg.value);
         idphoto.value=getIDphotographer();
-        return true
+        return true;
       }
-      else  
-      {
-          return false;
-      }
+      else {return false;}
+
     }
     //check of the fisrtname
     function checkfirst(arg)
