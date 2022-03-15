@@ -91,7 +91,7 @@ function validate(){
     //general test of the cheking form ( name email etc)
       
     
-      if (((checkfirst(firstname) & checkfam (familyname) &  checkemail(e_mail)&checkmsg(msg)) ==true))
+      if (((checkfirst(firstname) & checkfam (familyname) &  checkemail(e_mail) & checkmsg(msg)) == true))
       {
         console.log(firstname.value);
         console.log(familyname.value);
@@ -166,8 +166,4 @@ function validate(){
     return true;
 
     }
-    }
-    function startagain(){
-      const closebtn=document.getElementById("close_modal");
-      firstname.focus();
     }
